@@ -1,12 +1,15 @@
 "use client";
+
 import { useRef, type FormEvent } from "react";
+import axios from "axios";
+import Form from "next/form";
 import { BackendUrl } from "@/utils/core";
 
 interface FormProps {
   getallposts: () => void;
 }
 
-const Form = ({ getallposts }: FormProps) => {
+const PostForm = ({ getallposts }: FormProps) => {
   const titleRef = useRef<HTMLInputElement>(null);
   const descriptionRef = useRef<HTMLTextAreaElement>(null);
   const postImageRef = useRef<HTMLInputElement>(null);
@@ -115,4 +118,4 @@ const Form = ({ getallposts }: FormProps) => {
   );
 };
 
-export default Form;
+export default PostForm;

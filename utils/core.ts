@@ -1,2 +1,1 @@
-import "dotenv/config";
-export const BackendUrl = process.env.BackendUrl;
+export const BackendUrl = process.env.NEXT_PUBLIC_BACKEND_URL;

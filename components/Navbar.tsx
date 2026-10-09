@@ -1,12 +1,14 @@
+"use client";
+
 import { useState } from "react";
 import { FiBarChart2, FiLogOut } from "react-icons/fi";
 import Link from "next/link";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 import { store } from "../store/states";
 
 const Navbar = () => {
   const { user, logout } = store();
-  const router = useRouter()
+  const router = useRouter();
   const [imageError, setImageError] = useState(false);
 
   const profileImg = user?.profileimg;
